@@ -29,8 +29,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        """GET to /(.+) renders index.html with data variable
-        data = {
+        """GET to /(.+) renders index.html with state variable
+        state = {
             "type": "new"
         }"""
         template = JINJA_ENVIRONMENT.get_template('index.html')
@@ -54,8 +54,8 @@ class NewHandler(webapp2.RequestHandler):
 
 class ShowHandler(webapp2.RequestHandler):
     def get(self, sid):
-        """GET to /foobar renders index.html with data variable
-        data = {
+        """GET to /foobar renders index.html with state variable
+        state = {
             "type": "new" | "show",
             "sid": "foobar",
             "urls": [...]
