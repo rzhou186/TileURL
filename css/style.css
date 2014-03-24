@@ -1,51 +1,45 @@
-.page-container {
+.tileurl-container {
   position: absolute;
   width: 100%;
   top: 50px;
-  bottom: 50px;
+  bottom: 0px;
 }
 
-.page {
+.tileurl {
   position: absolute;
   width: 50%;
   height: 100%;
-  border: none;
 }
 
-.page-left {
+.tileurl-left {
   left: 0px;
   border-right: 1px solid #eeeeee;
 }
 
-.page-right {
+.tileurl-right {
   right: 0px;
   border-left: 1px solid #eeeeee;
 }
 
-.url-container {
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  min-height: 50px;
-  border-top: 2px solid #eeeeee;
-  z-index: 1030;
+.tileurl .webpage {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  bottom: 50px;
+}
+
+.tileurl .webpage iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .url {
   position: absolute;
-  width: 50%;
-  height: 100%;
+  width: 100%;
+  min-height: 50px;
+  bottom: 0px;
   border: none;
   padding: 6px 12px;
-}
-
-.url-left {
-  left: 0px;
-  border-right: 1px solid #eeeeee;
-}
-
-.url-right {
-  right: 0px;
-  border-left: 1px solid #eeeeee;
+  border-top: 2px solid #eeeeee;
 }

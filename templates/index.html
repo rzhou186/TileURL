@@ -30,14 +30,19 @@
     </nav>
 
     {% if state["type"] == "new" %}
-      <div class="page-container">
-        <iframe class="page page-left" src="//www.reddit.com"></iframe>
-        <iframe class="page page-right" src="//www.getbootstrap.com"></iframe>
-      </div>
-
-      <div class="url-container">
-        <input type="text" class="url url-left" placeholder="First URL...">
-        <input type="text" class="url url-right" placeholder="Second URL...">
+      <div class="tileurl-container">
+        <div class="tileurl tileurl-left">
+          <div class="webpage">
+            <iframe src=""></iframe>
+          </div>
+          <input type="text" class="url" placeholder="First URL...">
+        </div>
+        <div class="tileurl tileurl-right">
+          <div class="webpage">
+            <iframe src=""></iframe>
+          </div>
+          <input type="text" class="url" placeholder="Second URL...">
+        </div>
       </div>
     {% elif state["type"] == "show" %}
 
