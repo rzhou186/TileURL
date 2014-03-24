@@ -1,0 +1,51 @@
+.page-container {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  bottom: 50px;
+}
+
+.page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border: none;
+}
+
+.page-left {
+  left: 0px;
+  border-right: 1px solid #eeeeee;
+}
+
+.page-right {
+  right: 0px;
+  border-left: 1px solid #eeeeee;
+}
+
+.url-container {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  min-height: 50px;
+  border-top: 2px solid #eeeeee;
+  z-index: 1030;
+}
+
+.url {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  border: none;
+  padding: 6px 12px;
+}
+
+.url-left {
+  left: 0px;
+  border-right: 1px solid #eeeeee;
+}
+
+.url-right {
+  right: 0px;
+  border-left: 1px solid #eeeeee;
+}

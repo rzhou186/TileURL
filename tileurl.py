@@ -34,7 +34,7 @@ class MainHandler(webapp2.RequestHandler):
             "type": "new"
         }"""
         template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.write(template.render({ 'state': json.dumps({ 'type': 'new' }) }))
+        self.response.write(template.render({ 'state': { 'type': 'new' } }))
 
 class NewHandler(webapp2.RequestHandler):
     def post(self):
@@ -69,7 +69,7 @@ class ShowHandler(webapp2.RequestHandler):
         else:
             state = { 'type': 'new', 'sid': sid }
 
-        self.response.write(template.render({ 'state': json.dumps(state) }))
+        self.response.write(template.render({ 'state': state }))
 
 application = webapp2.WSGIApplication([
     ('/', MainHandler),
