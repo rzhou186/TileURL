@@ -20,13 +20,15 @@
           <div class="webpage">
             <iframe src=""></iframe>
           </div>
-          <input type="text" class="url" placeholder="URL for Left Tile">
+          <input type="text" class="url" placeholder="Enter URL here...">
+          <img class="tileurl-loading" src="/img/loading.gif">
         </div>
         <div id="tileurl-right" class="tileurl tileurl-right">
           <div class="webpage">
             <iframe src=""></iframe>
           </div>
-          <input type="text" class="url" placeholder="URL for Right Tile">
+          <input type="text" class="url" placeholder="Enter URL here...">
+          <img class="tileurl-loading" src="/img/loading.gif">
         </div>
       </div>
     {% elif state["type"] == "show" %}
@@ -36,12 +38,14 @@
             <iframe src="{{ state['urls'][0] }}"></iframe>
           </div>
           <a class="url" href="{{ state['urls'][0] }}" readonly>{{ state['urls'][0] }}</a>
+          <img class="tileurl-loading show" src="/img/loading.gif">
         </div>
         <div id="tileurl-right" class="tileurl tileurl-right">
           <div class="webpage">
             <iframe src="{{ state['urls'][1] }}"></iframe>
           </div>
           <a class="url" href="{{ state['urls'][1] }}" readonly>{{ state['urls'][1] }}</a>
+          <img class="tileurl-loading show" src="/img/loading.gif">
         </div>
       </div>
     {% endif %}

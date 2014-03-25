@@ -9,11 +9,16 @@ function Tileurl(tileurlId) {
   this.elem = $("#" + tileurlId);
   this.iframeElem = this.elem.find("iframe");
   this.urlElem = this.elem.find("input.url");
+  this.loadingElem = this.elem.find(".tileurl-loading");
 
   var that = this;
   this.urlElem.keyup(function() {
     that.update();
   });
+  this.iframeElem.load(function() {
+    that.hideLoading();
+  });
+
   this.update();
 }
 
@@ -26,4 +31,15 @@ Tileurl.prototype.update = function() {
   this.iframeElem.attr("src", 
     this.urlElem.val()
   );
+  if (this.iframeElem.attr("src"))
+    this.showLoading();
+}
+
+
+Tileurl.prototype.showLoading = function() {
+  this.loadingElem.show();
+}
+
+Tileurl.prototype.hideLoading = function() {
+  this.loadingElem.hide();
 }

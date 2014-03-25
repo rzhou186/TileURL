@@ -18,7 +18,7 @@
 .navbar-default .navbar-header .navbar-brand img {
   margin-top: -5px;
   margin-right: 5px;
-  height: 25px;
+  max-height: 25px;
 }
 
 .navbar-form {

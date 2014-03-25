@@ -27,6 +27,7 @@
   width: 100%;
   top: 0px;
   bottom: 50px;
+  z-index: 1;
 }
 
 .tileurl .webpage iframe {
@@ -49,4 +50,15 @@
 
 .tileurl a.url {
   padding: 14px;
+}
+
+.tileurl-loading {
+  display: none;
+  max-height: 50px;
+  margin: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
 }

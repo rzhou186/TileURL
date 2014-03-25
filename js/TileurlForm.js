@@ -17,12 +17,11 @@ function TileurlForm(tileurlFormId, tileurlIds) {
 
 /* Method: TileurlForm.prototype.submit
  * ------------------------------------
- * Overwrites the default submission behavior for the
- * form. Takes in an array of IDs for the TileURL
- * elements to be submitted. Extracts data from the
- * form element and the TileURL elements, then runs 
- * that data through validations. Submits via AJAX if
- * all validations pass.
+ * Takes in an array of IDs for the TileURL elements
+ * to be submitted. Extracts data from the form 
+ * element and the TileURL elements, then runs that
+ * data through validations. Submits via AJAX if all
+ * validations pass.
  */
 TileurlForm.prototype.submit = function(tileurlIds) {
   var sid = this.elem.find("[name='sid']").val();
@@ -38,7 +37,7 @@ TileurlForm.prototype.submit = function(tileurlIds) {
       "urls": urls
     })
   }, function(state) {
-    
+    // Display some kind of error or redirect.
   });
 }
 
