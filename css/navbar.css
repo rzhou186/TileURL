@@ -1,4 +1,12 @@
+.navbar {
+  font-weight: bold;
+}
+
 .navbar-default {
   background-color: #ffffff;
-  border-bottom: 2px solid #eeeeee;
+  border-bottom: 2px solid #cccccc;
+}
+
+.navbar input[type="text"] {
+  font-weight: normal;
 }

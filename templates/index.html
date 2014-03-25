@@ -10,26 +10,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">TileURL</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <form id="tileurl-form" class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" name="sid" class="form-control" placeholder="TileURL...">
-            </div>
-            <button class="btn btn-default" type="submit">Create</button>
-          </form>
-        </div>
-      </div>
-    </nav>
+    {% include "navbar.html" %}
 
     {% if state["type"] == "new" %}
       <div class="tileurl-container">
@@ -47,14 +28,29 @@
         </div>
       </div>
     {% elif state["type"] == "show" %}
-      <h1>Congrats! You did it!</h1>
+      <div class="tileurl-container">
+        <div id="tileurl-left" class="tileurl tileurl-left">
+          <div class="webpage">
+            <iframe src="{{ state['urls'][0] }}"></iframe>
+          </div>
+          <input type="text" class="url" value="{{ state['urls'][0] }}" readonly>
+        </div>
+        <div id="tileurl-right" class="tileurl tileurl-right">
+          <div class="webpage">
+            <iframe src="{{ state['urls'][1] }}"></iframe>
+          </div>
+          <input type="text" class="url" value="{{ state['urls'][1] }}" readonly>
+        </div>
+      </div>
     {% endif %}
 
     <script type="text/javascript" src="/lib/jquery.min.js"></script>
     <script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/Tileurl.js"></script>
-    <script type="text/javascript" src="/js/TileurlForm.js"></script>
-    <script type="text/javascript" src="/js/main.js"></script>
+    {% if state["type"] == "new" %}
+      <script type="text/javascript" src="/js/Tileurl.js"></script>
+      <script type="text/javascript" src="/js/TileurlForm.js"></script>
+      <script type="text/javascript" src="/js/main.js"></script>
+    {% endif %}
   </body>
 
 </html>
