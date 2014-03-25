@@ -5,4 +5,4 @@ $(document).ready(function() {
     "tileurl-form", 
     [ "tileurl-left", "tileurl-right" ]
   );
-}); 
+});

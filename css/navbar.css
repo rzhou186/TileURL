@@ -1,12 +1,40 @@
-.navbar {
-  font-weight: bold;
-}
-
 .navbar-default {
   background-color: #ffffff;
   border-bottom: 2px solid #cccccc;
 }
 
-.navbar input[type="text"] {
-  font-weight: normal;
+.navbar-default .navbar-header .navbar-brand {
+  color: #ffffff;
+  background-color: #6f5499;
+  height: 50px;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
+  background-color: #634b89;
+}
+
+.navbar-default .navbar-header .navbar-brand img {
+  margin-top: -5px;
+  margin-right: 5px;
+  height: 25px;
+}
+
+.navbar-form {
+  border: none;
+}
+
+.navbar-form [type="submit"] {
+  margin-left: 2px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #6f5499;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #574278;
+  text-decoration: underline;
 }

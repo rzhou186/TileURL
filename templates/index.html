@@ -3,8 +3,10 @@
 
   <head>
     <title>TileURL</title>
+    <link rel="icon" type="image/png" href="/img/favicon.png">
     <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/buttons.css">
     <link rel="stylesheet" type="text/css" href="/css/navbar.css">
     <link rel="stylesheet" type="text/css" href="/css/tileurl.css">
   </head>
@@ -18,13 +20,13 @@
           <div class="webpage">
             <iframe src=""></iframe>
           </div>
-          <input type="text" class="url" placeholder="First URL...">
+          <input type="text" class="url" placeholder="URL for left tile...">
         </div>
         <div id="tileurl-right" class="tileurl tileurl-right">
           <div class="webpage">
             <iframe src=""></iframe>
           </div>
-          <input type="text" class="url" placeholder="Second URL...">
+          <input type="text" class="url" placeholder="URL for right tile...">
         </div>
       </div>
     {% elif state["type"] == "show" %}
@@ -33,13 +35,13 @@
           <div class="webpage">
             <iframe src="{{ state['urls'][0] }}"></iframe>
           </div>
-          <input type="text" class="url" value="{{ state['urls'][0] }}" readonly>
+          <a class="url" href="{{ state['urls'][0] }}" readonly>{{ state['urls'][0] }}</a>
         </div>
         <div id="tileurl-right" class="tileurl tileurl-right">
           <div class="webpage">
             <iframe src="{{ state['urls'][1] }}"></iframe>
           </div>
-          <input type="text" class="url" value="{{ state['urls'][1] }}" readonly>
+          <a class="url" href="{{ state['urls'][1] }}" readonly>{{ state['urls'][1] }}</a>
         </div>
       </div>
     {% endif %}

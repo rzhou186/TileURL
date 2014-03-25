@@ -1,3 +1,22 @@
-body {
-  
+a {
+  color: #6f5499;
+  font-weight: bold;
+}
+
+a:hover,
+a:focus {
+  color: #574278;
+  text-decoration: underline;
+}
+
+input[type="text"] {
+  color: #6f5499;
+  font-weight: bold;
+  padding: 6px 12px;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+}
+
+.glyphicon {
+  font-size: 12px
 }

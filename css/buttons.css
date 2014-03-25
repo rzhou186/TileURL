@@ -1,0 +1,46 @@
+.btn-tileurl {
+  color: #ffffff;
+  background-color: #6f5499;
+  border-color: #634b89;
+  font-weight: bold;
+}
+
+.btn-tileurl:hover,
+.btn-tileurl:focus,
+.btn-tileurl:active,
+.btn-tileurl.active,
+.open .dropdown-toggle.btn-tileurl {
+  color: #ffffff;
+  background-color: #634b89;
+  border-color: #574278;
+}
+
+.btn-tileurl:active,
+.btn-tileurl.active,
+.open .dropdown-toggle.btn-tileurl {
+  background-image: none;
+}
+
+.btn-tileurl.disabled,
+.btn-tileurl[disabled],
+fieldset[disabled] .btn-tileurl,
+.btn-tileurl.disabled:hover,
+.btn-tileurl[disabled]:hover,
+fieldset[disabled] .btn-tileurl:hover,
+.btn-tileurl.disabled:focus,
+.btn-tileurl[disabled]:focus,
+fieldset[disabled] .btn-tileurl:focus,
+.btn-tileurl.disabled:active,
+.btn-tileurl[disabled]:active,
+fieldset[disabled] .btn-tileurl:active,
+.btn-tileurl.disabled.active,
+.btn-tileurl[disabled].active,
+fieldset[disabled] .btn-tileurl.active {
+  background-color: #6f5499;
+  border-color: #634b89;
+}
+
+.btn-tileurl .badge {
+  color: #6f5499;
+  background-color: #ffffff;
+}

@@ -1,28 +1,33 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
-      {% if state["type"] == "new" %}
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      {% endif %}
-      <a class="navbar-brand" href="/">TileURL</a>
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="/img/tileurl_white.png">
+        TileURL
+      </a>
     </div>
     
     <div class="collapse navbar-collapse">
       {% if state["type"] == "new" %}
         <form id="tileurl-form" class="navbar-form navbar-right">
           <div class="form-group">
-            <input type="text" name="sid" class="form-control" placeholder="TileURL...">
+            <strong>tileurl.com/</strong>
+            <input type="text" name="sid">
           </div>
-          <button class="btn btn-default" type="submit">Create</button>
+          <button class="btn btn-tileurl" type="submit">Create</button>
         </form>
       {% elif state["type"] == "show" %}
         <ul class="nav navbar-nav navbar-right">
           <li>
-            <a href="">tileurl.com/{{ state["sid"] }}</a>
+            <a href="">
+              <span class="glyphicon glyphicon-link"></span>
+              tileurl.com/{{ state["sid"] }}
+            </a>
           </li>
         </ul>
       {% endif %}

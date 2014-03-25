@@ -9,6 +9,7 @@
   position: absolute;
   width: 50%;
   height: 100%;
+  background-image: url("/img/grey_wash_wall.png");
 }
 
 .tileurl-left {
@@ -40,7 +41,12 @@
   min-height: 50px;
   bottom: 0px;
   border: none;
-  padding: 6px 12px;
   border-top: 2px solid #cccccc;
+  border-radius: 0px;
+  background-color: #ffffff;
   text-align: center;
+}
+
+.tileurl a.url {
+  padding: 12px;
 }
