@@ -35,11 +35,18 @@ Tileurl.prototype.update = function() {
     this.showLoading();
 }
 
-
+/* Method: Tileurl.prototype.showLoading
+ * -------------------------------------
+ * Displays the TileURL's loading animation.
+ */
 Tileurl.prototype.showLoading = function() {
   this.loadingElem.show();
 }
 
+/* Method: Tileurl.prototype.hideLoading
+ * -------------------------------------
+ * Hides the TileURL's loading animation.
+ */
 Tileurl.prototype.hideLoading = function() {
   this.loadingElem.hide();
 }

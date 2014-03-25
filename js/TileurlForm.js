@@ -27,7 +27,7 @@ TileurlForm.prototype.submit = function(tileurlIds) {
   var sid = this.elem.find("[name='sid']").val();
   var urls = this.extractUrls(tileurlIds);
   if (this.failsValidations(sid, urls)) {
-    // Display some kind of error.
+    alert("Form failed to submit.");
     return;
   }
 
@@ -36,8 +36,11 @@ TileurlForm.prototype.submit = function(tileurlIds) {
       "sid": sid,
       "urls": urls
     })
-  }, function(state) {
-    // Display some kind of error or redirect.
+  }, function(data) {
+    data = JSON.parse(data);
+    if (data["status"] === "success")
+      window.location.href = "/" + sid;
+    else alert("TileURL failed to be created.");
   });
 }
 
